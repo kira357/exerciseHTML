@@ -111,7 +111,7 @@
     transform-origin: calc(100% - 20px) top;
     animation: headerNotifyGrowth ease-in 0.25s ;
     will-change: opacity , transform;
-    display: none;
+    /* display: none; */
 }
 @keyframes headerNotifyGrowth {
     from {
