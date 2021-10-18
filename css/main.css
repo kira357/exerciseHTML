@@ -1,0 +1,229 @@
+.header{
+    height: 120px;
+    background-image: linear-gradient(0,#fe6433,#f53e2d );
+}
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.header__navbar-list{
+    display:flex;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 4px;
+}
+.header__navbar-item{
+    display: inline-block;
+    margin: 0 8px;
+    position: relative;
+    min-height: 26px;
+}
+
+.header__navbar-item--has-qr:hover .header__qr{
+    display: block;
+}
+.navbar-item--strong,
+.header__navbar-item a{
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.5rem;
+    font-weight: 300;
+   
+}
+.navbar-item--strong{
+    font-weight: 400;
+}
+
+.navbar-item--strong:hover,
+.header__navbar-item a:hover{
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+.navbar-item--separate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid #FB9086;;
+    height: 14px;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.header__navbar-icon ion-icon{
+    font-size: 2rem; 
+    margin: 0 4px;
+}
+
+.header__navbar-item,
+.header__navbar-item a,
+.header__navbar-icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Header QR coode */
+.header__qr{
+    position: absolute;
+    background-color: var(--white-color);
+    width:  186px;
+    left: 0;
+    top: 118%;
+    padding: 8px;
+    border-radius: 2px;
+    display: none;
+    animation: animationFadeIn ease-in 0.2s;
+}
+.header__qr::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    left: 0;
+    top: -14px;
+}
+.header__qr-img{
+    width: 100%;
+    object-fit: cover;
+}
+.header__qr-app{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__qr-dowload{
+    height: 15px;
+}
+
+.header__qr-link{
+    margin-right: 10px;
+}
+/* header notification */
+.header__notify{
+    position: absolute;
+    top: 118%;
+    right: 0;
+    width: 404px;
+    background-color: var(--white-color);
+    border: 1px solid #d3d3d3;;
+    cursor: pointer;
+    transform-origin: calc(100% - 20px) top;
+    animation: headerNotifyGrowth ease-in 0.25s ;
+    will-change: opacity , transform;
+    display: none;
+}
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__notify::before{
+    content: "";
+    position: absolute;
+    top: -28px;
+    right: 7px;
+    border-width: 20px 28px;
+    border-style: solid ;
+    border-color: transparent transparent var(--white-color) transparent;
+
+}
+.header__notify::after{
+    content: "";
+    position: absolute;
+    top: -13px;
+    right: 0px;
+    width: 100px;
+    height: 12px;
+    display: block;
+}
+
+
+.header__notify-header{
+    height: 40px;
+    background-color: var(--white-color);
+}
+.header__notify-header h3 {
+    color: #666;
+    margin: 0 0 0 12px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 40px;
+    user-select: none;
+}
+.header__notify-list{
+    list-style: none;
+    padding-left: 0;
+}
+.header__notify-item{
+    display: flex;
+}
+.header__notify-item:hover {
+    background-color: #f7f7f7;
+}
+.header__notify-item--viewed{
+    background-color: rgba(254, 97, 51, 0.08);
+}
+.header__notify-link{
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+}
+.header__notifi-img{
+    width: 48px;
+    object-fit: contain;
+}
+.header__notify-info{
+    margin-left: 12px;
+}
+.header__notify-name{
+    display: block;
+    color: var(--text-color);
+    font-weight: 400;
+    padding: 2px 0;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+.header__notify-descriontion{
+    display: block;
+    color: var(--black-color);
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-top: 4px;
+}
+.header__notify-footer{
+    display: flex;
+}
+.header__notify-footer-btn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--text-color);   
+    cursor: pointer;
+    padding: 12px 16px;
+    margin: auto;
+    font-weight: 400;
+}
+.header__navbar-item-shownotify:hover .header__notify{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
